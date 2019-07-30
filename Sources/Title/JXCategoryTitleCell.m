@@ -51,6 +51,14 @@
     _maskTitleMaskLayer = [CALayer layer];
     self.maskTitleMaskLayer.backgroundColor = [UIColor redColor].CGColor;
     self.maskTitleLabel.layer.mask = self.maskTitleMaskLayer;
+    
+    UIView *bg = [[UIView alloc]initWithFrame:CGRectMake(-11, 9, 53, 26)];
+    bg.backgroundColor = [UIColor colorWithRed:0 green:0 blue:0 alpha:0];
+    bg.layer.borderWidth = 1;
+    bg.layer.cornerRadius = 13;
+    bg.layer.borderColor = [UIColor colorWithRed:247/255.0f green:247/255.0f blue:247/255.0f alpha:1].CGColor;
+    [self addSubview:bg];
+    [self sendSubviewToBack:bg];
 }
 
 - (void)layoutSubviews {
